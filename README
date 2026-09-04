@@ -1,0 +1,25 @@
+- ¿Todos los mensajes de error corresponden al campo que se está validando?
+= Se encontro un error en el mensaje de validacion de la variable telefono:
+  if (!telefonoRegex.test(telefono))
+  errors.push("El apellido no es valido");
+
+- ¿Todas las variables usadas existen y están bien escritas?
+= La variable errors estaba mal escrita en el ultimo bloque de validacion.
+let errors = [];
+
+if (!passwordRegex.test(password)) {
+        error.push(
+          "La contraseña no es valida, debe contener minimo 8 caracteres, 1 mayuscula, 1 minuscula, 1 numero, 1 caracter especial",
+        );
+      }
+
+= También se encontro un error en la validación de la siguiente variable: 
+  let nombreRegex = /^[a-zA-ZñÑáÁéÉíÍóÓúÚ/s']+$/i;
+  = /s esta mal escrito.
+  \s (Espacio): Coincide con cualquier espacio en blanco (espacios, tabulaciones, saltos de línea)
+
+- ¿Los `label` están correctamente asociados a sus `input`? (atributos `for`, `id` y `name`)
+= No, a los inputs les hace falta el atributo id para poder asociar el label correspondiente a cada input. 
+
+- ¿La validación realmente lee lo que el usuario escribe en el formulario?
+= No, esta evaluando las variables hardcodeadas en el JS. Para que evalue lo que escribe el usuario hay que seleccionar los elementos del formulario con document.getElementById o querySelector.
